@@ -18,4 +18,4 @@ $ npm run pack
 after built project, it put the release directory
 
 ## About this project
-This project was set up from scratch but is heavily influenced by the [electron-react-typescript](https://github.com/Robinfr/electron-react-typescript). Thank you [Robin Franken](https://github.com/Robinfr)
+This project was heavily influenced by the [electron-react-typescript](https://github.com/Robinfr/electron-react-typescript). Thank you [Robin Franken](https://github.com/Robinfr)
