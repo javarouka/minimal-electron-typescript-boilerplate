@@ -3,7 +3,11 @@ root = true
 [*.{ts,tsx,css,json,html,js,md,properties,sh,svg,txt,xml}]
 charset = utf-8
 
-[*.{ts,tsx,json,html,css}]
+[*.{ts,tsx,html,css}]
 indent_style = space
 indent_size = 4
 end_of_line = lf
+
+
+[*.{json}]
+indent_size = 2

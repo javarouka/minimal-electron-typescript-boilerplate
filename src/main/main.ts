@@ -1,6 +1,16 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
+
+ipcMain.on('asynchronous-message', (event: any, arg: any) => {
+    console.log('asynchronous', arg);
+    event.reply('asynchronous-reply', `[${new Date()}] pong`);
+});
+
+ipcMain.on('synchronous-message', (event: any, arg: any) => {
+    console.log('synchronous', arg);
+    event.returnValue = `[${new Date()}] pong`;
+});
 
 let win: BrowserWindow | null;
 
@@ -23,6 +33,7 @@ const createWindow = async () => {
         width: 800,
         height: 600,
         webPreferences: {
+            preload: path.join(app.getAppPath(), 'preload.js'),
             nodeIntegration: true
         }
     });
