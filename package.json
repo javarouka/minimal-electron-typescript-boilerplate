@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "{src,test,mocks}/**/*.{js,ts,tsx,json,css,scss,md}": [
+    "{src,test,mocks}/**/*.{js,ts,tsx,json,md}": [
       "prettier --config ./.prettierrc --write",
       "git add"
     ],

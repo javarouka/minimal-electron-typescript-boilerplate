@@ -1,13 +1,13 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow } from 'electron';
 import { createWindow } from './window';
 import { enableIPC } from './ipc';
 import { supportAllClosed } from './config';
 
-let win: BrowserWindow | null = null;
+let win: Nullable<BrowserWindow> = null;
 
-app.on('ready', () => {
+app.on('ready', async () => {
     enableIPC();
-    createWindow(app);
+    win = await createWindow(app);
 });
 
 app.on('window-all-closed', () => {

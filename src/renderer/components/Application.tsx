@@ -37,7 +37,7 @@ const Application = () => {
             </Card>
             <Card>
                 <SubTitle>Test Backend Interface</SubTitle>
-                <Button onClick={getServerDir}>Get current application directory!</Button>
+                <Button onClick={getServerDir}>Get current application parent directory!</Button>
                 <List>
                     {dir.map(d => (
                         <ListItem key={`li_${d}`}>{d}</ListItem>
