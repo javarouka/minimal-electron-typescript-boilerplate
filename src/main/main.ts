@@ -1,16 +1,9 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
+import './ipc';
 
-ipcMain.on('asynchronous-message', (event: any, arg: any) => {
-    console.log('asynchronous', arg);
-    event.reply('asynchronous-reply', `[${new Date()}] pong`);
-});
-
-ipcMain.on('synchronous-message', (event: any, arg: any) => {
-    console.log('synchronous', arg);
-    event.returnValue = `[${new Date()}] pong`;
-});
+const dev = process.env.NODE_ENV !== 'production';
 
 let win: BrowserWindow | null;
 
@@ -25,34 +18,31 @@ const installExtensions = async () => {
 };
 
 const createWindow = async () => {
-    if (process.env.NODE_ENV !== 'production') {
+    let loadURL = 'http://localhost:1980';
+
+    if (dev) {
         await installExtensions();
+        process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
+    } else {
+        loadURL = url.format({
+            pathname: path.join(__dirname, 'index.html'),
+            protocol: 'file:',
+            slashes: true
+        });
     }
 
     win = new BrowserWindow({
-        width: 800,
+        width: 1200,
         height: 600,
         webPreferences: {
             preload: path.join(app.getAppPath(), 'preload.js'),
-            nodeIntegration: true
+            nodeIntegration: dev
         }
     });
 
-    if (process.env.NODE_ENV !== 'production') {
-        process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
-        win.loadURL(`http://localhost:1980`);
-    } else {
-        win.loadURL(
-            url.format({
-                pathname: path.join(__dirname, 'index.html'),
-                protocol: 'file:',
-                slashes: true
-            })
-        );
-    }
+    win.loadURL(loadURL);
 
     if (process.env.NODE_ENV !== 'production') {
-        // 개발자 도구를 연다. https://github.com/electron/electron/issues/12438
         win.webContents.once('dom-ready', () => {
             win!.webContents.openDevTools();
         });

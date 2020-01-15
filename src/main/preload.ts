@@ -1,2 +1,3 @@
-import * as fs from 'fs';
-window.hello = () => console.log(fs.readdirSync('./').join());
+import backend from './backend/backendInterface';
+
+window.backend = backend;
