@@ -2,6 +2,7 @@ import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
 import { ipcRenderer } from 'electron';
 import Layout from './layout/Layout';
+import { Block, Title, SubTitle, Card, Button, Pre, List, ListItem } from './base';
 
 const Application = () => {
     const [message, setMessage] = React.useState<string[]>([]);
@@ -24,25 +25,25 @@ const Application = () => {
 
     return (
         <Layout>
-            <h1>샘플 페이지</h1>
-            <div>
-                <h2>Test IPC</h2>
-                <button onClick={sendPing}>메인프로세스 핑</button>
-                <pre>
+            <Title>Hello world page</Title>
+            <Card>
+                <SubTitle>Test IPC</SubTitle>
+                <Button onClick={sendPing}>Shoot Ping to Server</Button>
+                <Pre>
                     {message.map((m: string, index: number) => (
-                        <div key={index}>{m}</div>
+                        <Block key={index}>{m}</Block>
                     ))}
-                </pre>
-            </div>
-            <div>
-                <h2>Test Backend Interface</h2>
-                <button onClick={getServerDir}>Get!</button>
-                <ul>
+                </Pre>
+            </Card>
+            <Card>
+                <SubTitle>Test Backend Interface</SubTitle>
+                <Button onClick={getServerDir}>Get current application directory!</Button>
+                <List>
                     {dir.map(d => (
-                        <li key={`li_${d}`}>{d}</li>
+                        <ListItem key={`li_${d}`}>{d}</ListItem>
                     ))}
-                </ul>
-            </div>
+                </List>
+            </Card>
         </Layout>
     );
 };

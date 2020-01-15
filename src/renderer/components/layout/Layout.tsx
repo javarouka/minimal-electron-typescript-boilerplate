@@ -1,16 +1,9 @@
 import * as React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+import { Block } from '../base';
+import GlobalStyle from '../base/GlobalStyle';
 
-const GlobalStyle = createGlobalStyle`
-    html, body {
-        box-sizing: border-box;
-        * {
-            box-sizing: inherit;
-        }
-    }
-`;
-
-const Wrapper = styled.div``;
+const Wrapper = styled(Block)``;
 
 const Layout: React.FunctionComponent = props => {
     return (

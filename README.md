@@ -1,5 +1,9 @@
 # Electron Boilerplate
 
+## TODO
+- eslint
+- sample test code
+
 ## Start
 
 ### development
