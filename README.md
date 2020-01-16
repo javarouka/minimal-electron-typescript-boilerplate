@@ -1,8 +1,8 @@
 # Electron Boilerplate
 
 ## TODO
-- eslint
-- sample test code
+- change eslint fron tslint
+- add sample test code
 
 ## Start
 
