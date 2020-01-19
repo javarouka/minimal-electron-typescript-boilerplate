@@ -3,9 +3,11 @@
 Electron-Typescript-React boilerplate with minimal functionality.
 
 ## dependencies
+- [babel](https://github.com/babel/babel)
 - [electron](https://github.com/electron)
 - [typescript](https://github.com/microsoft/TypeScript)
 - [react](https://github.com/facebook/react)
+- [styled-components](https://github.com/styled-components/styled-components)
 - [jest](https://github.com/facebook/jest)
 
 ## TODO
