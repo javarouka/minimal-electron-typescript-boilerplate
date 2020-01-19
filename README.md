@@ -2,6 +2,12 @@
 
 Electron-Typescript-React boilerplate with minimal functionality.
 
+## dependencies
+- [electron](https://github.com/electron)
+- [typescript](https://github.com/microsoft/TypeScript)
+- [react](https://github.com/facebook/react)
+- [jest](https://github.com/facebook/jest)
+
 ## TODO
 - change eslint fron tslint
 - add sample test code
