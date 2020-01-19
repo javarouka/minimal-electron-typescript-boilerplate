@@ -9,6 +9,7 @@ Electron-Typescript-React boilerplate with minimal functionality.
 - [react](https://github.com/facebook/react)
 - [styled-components](https://github.com/styled-components/styled-components)
 - [jest](https://github.com/facebook/jest)
+- webpack, prettier, husky, tslint, lint-staged etc develop support tool
 
 ## TODO
 - change eslint fron tslint
