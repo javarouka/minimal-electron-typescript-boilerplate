@@ -1,4 +1,6 @@
-# Electron Boilerplate
+# Minimal Electron TypeScript Boilerplate
+
+Electron-Typescript-React boilerplate with minimal functionality.
 
 ## TODO
 - change eslint fron tslint

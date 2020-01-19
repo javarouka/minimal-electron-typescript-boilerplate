@@ -4,6 +4,7 @@
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
+    "test": "jest --config ./jest/jest.config.js --coverage --passWithNoTests",
     "build:main": "cross-env NODE_ENV=production webpack --config ./config/webpack.main.prod.config.js",
     "build:renderer": "cross-env NODE_ENV=production webpack --config ./config/webpack.renderer.prod.config.js",
     "build": "npm run build:main && npm run build:renderer",
