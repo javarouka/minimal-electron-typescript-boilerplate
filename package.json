@@ -1,8 +1,28 @@
 {
   "name": "minimal-electron-typescript-boilerplate",
   "version": "0.0.1",
-  "description": "",
-  "main": "./dist/main.js",
+  "description": "Electron-Typescript-React boilerplate with minimal functionality",
+  "keywords": [
+    "electron",
+    "react",
+    "typescript",
+    "boilerplate",
+    "simple",
+    "minimal"
+  ],
+  "bugs": {
+    "url": "https://github.com/javarouka/minimal-electron-typescript-boilerplate/issues",
+    "email": "javarouka@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javarouka/minimal-electron-typescript-boilerplate.git"
+  },
+  "author": {
+    "name": "Yi Hanghee",
+    "email": "javarouka@gmail.com"
+  },
+  "license": "MIT",
   "scripts": {
     "test": "jest --config ./jest/jest.config.js --coverage --passWithNoTests",
     "build:main": "cross-env NODE_ENV=production webpack --config ./config/webpack.main.prod.config.js",
@@ -14,50 +34,6 @@
     "lint": "tslint '{src,test,mocks}/**/*.{ts,tsx}' --project ./tsconfig.json",
     "pack": "npm run build && electron-builder --dir"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "{src,test,mocks}/**/*.{js,ts,tsx,json,md}": [
-      "prettier --config ./.prettierrc --write",
-      "git add"
-    ],
-    "{src,test,mocks}/**/*.{js,ts,tsx}": [
-      "tslint --project ./tsconfig.json --fix",
-      "git add"
-    ]
-  },
-  "build": {
-    "productName": "any",
-    "mac": {
-      "category": "development"
-    },
-    "directories": {
-      "output": "release"
-    },
-    "files": [
-      "dist/",
-      "node_modules/",
-      "package.json"
-    ],
-    "linux": {
-      "target": "deb"
-    },
-    "win": {
-      "target": "nsis"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:javarouka/redis-gui.git"
-  },
-  "author": {
-    "name": "Yi Hanghee",
-    "email": "javarouka@gmail.com"
-  },
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
@@ -113,5 +89,40 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "styled-components": "^5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,test,mocks}/**/*.{js,ts,tsx,json,md}": [
+      "prettier --config ./.prettierrc --write",
+      "git add"
+    ],
+    "{src,test,mocks}/**/*.{js,ts,tsx}": [
+      "tslint --project ./tsconfig.json --fix",
+      "git add"
+    ]
+  },
+  "build": {
+    "productName": "any",
+    "mac": {
+      "category": "development"
+    },
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/",
+      "node_modules/",
+      "package.json"
+    ],
+    "linux": {
+      "target": "deb"
+    },
+    "win": {
+      "target": "nsis"
+    }
   }
 }
