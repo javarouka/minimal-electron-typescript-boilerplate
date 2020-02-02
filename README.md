@@ -4,6 +4,8 @@ Electron-Typescript-React boilerplate with minimal functionality.
 
 ## Get
 
+clone this repository. 😳
+
 ```
 $ git clone --depth=1 https://github.com/javarouka/minimal-electron-typescript-boilerplate
 ```
