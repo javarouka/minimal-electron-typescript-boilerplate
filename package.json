@@ -1,6 +1,6 @@
 {
   "name": "minimal-electron-typescript-boilerplate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Electron-Typescript-React boilerplate with minimal functionality",
   "keywords": [
     "electron",
@@ -23,8 +23,11 @@
     "email": "javarouka@gmail.com"
   },
   "license": "MIT",
+  "bin": {
+    "electrom-ts-boilerplate": "./cli.js"
+  },
   "scripts": {
-    "bolierplates": "npm.js",
+    "bolierplates": "npm run ",
     "test": "jest --config ./jest/jest.config.js --coverage --passWithNoTests",
     "build:main": "cross-env NODE_ENV=production webpack --config ./config/webpack.main.prod.config.js",
     "build:renderer": "cross-env NODE_ENV=production webpack --config ./config/webpack.renderer.prod.config.js",
@@ -55,6 +58,7 @@
     "@types/webpack-env": "^1.15.0",
     "babel-loader": "8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "copyfiles": "^2.2.0",
     "cross-env": "6.0.3",
     "electron": "^7.1.9",
     "electron-builder": "^22.2.0",
