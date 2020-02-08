@@ -1,6 +1,6 @@
 {
   "name": "minimal-electron-typescript-boilerplate",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Electron-Typescript-React boilerplate with minimal functionality",
   "keywords": [
     "electron",
