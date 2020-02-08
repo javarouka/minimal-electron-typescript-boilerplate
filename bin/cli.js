@@ -9,11 +9,16 @@ if(args.length === 0) {
         Usage
         $ minimal-electron-typescript-boilerplate <your-project-path>
 `)
-
-    process.exit(-1)
+    process.exit(-1);
 }
 
 const destination = args[0];
 
-shell.cd(path)
-shell.exec('git clone https://github.com/javarouka/minimal-electron-typescript-boilerplate.git ' + destination)
+shell.exec(
+    'git clone https://github.com/javarouka/minimal-electron-typescript-boilerplate.git ' + destination,
+    function() {
+        console.log("complete cloning")
+        
+    }
+)
+

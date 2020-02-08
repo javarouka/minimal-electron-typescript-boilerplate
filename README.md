@@ -8,7 +8,7 @@ Electron-Typescript-React boilerplate with minimal functionality.
 
 ```
 $ git clone --depth=1 https://github.com/javarouka/minimal-electron-typescript-boilerplate
-$ cd boilerplate
+$ cd boilerplate // There are boilerplate files that you need
 ```
 
 ### 2. using npx 😳

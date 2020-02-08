@@ -25,6 +25,7 @@
   "license": "MIT",
   "bin": "./bin/cli.js",
   "dependencies": {
+    "copyfiles": "^2.2.0",
     "shelljs": "^0.8.3"
   }
 }
