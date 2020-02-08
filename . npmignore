@@ -1,5 +1,7 @@
 .iml
 .idea
+.github
+.vscode
 .tscache
 .DS_Store
 node_modules/

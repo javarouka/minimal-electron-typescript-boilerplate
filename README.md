@@ -4,13 +4,16 @@ Electron-Typescript-React boilerplate with minimal functionality.
 
 ## Get
 
-clone this repository. 😳
+### 1. using clone
 
 ```
 $ git clone --depth=1 https://github.com/javarouka/minimal-electron-typescript-boilerplate
+$ cd boilerplate
 ```
 
-*do not try > `npm install minimal-electron-typescript-boilerplate`*
+### 2. using npx 😳
+
+TODO.
 
 ## TODO
 - change eslint fron tslint
