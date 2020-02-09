@@ -10,6 +10,11 @@
     "simple",
     "minimal"
   ],
+  "scripts": {
+    "test": "npm run test:cli && npm run test:boilerplate",
+    "test:cli": "node ./bin/cli.js sampletest",
+    "test:boilerplate": "cd ./boilerplate && npm i && npm run build"
+  },
   "bugs": {
     "url": "https://github.com/javarouka/minimal-electron-typescript-boilerplate/issues",
     "email": "javarouka@gmail.com"

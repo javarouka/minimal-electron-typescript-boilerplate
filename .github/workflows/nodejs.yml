@@ -21,9 +21,7 @@ jobs:
       # working-directory: ./temp
       run: |
         npm install
-        node bin/cli.js fromgithub
-        cd fromgithub
-        npm install
-        npm run build
+        npm run test:cli
+        npm run test:boilerplate
       env:
         CI: true
