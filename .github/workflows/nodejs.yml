@@ -21,6 +21,7 @@ jobs:
       # working-directory: ./temp
       run: |
         npm install
-        npm run test
+        npm run test:cli
+      #  npm run test:boilerplate
       env:
         CI: true
