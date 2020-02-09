@@ -1,6 +1,6 @@
 // #!/usr/bin/env node
 const shell = require('shelljs')
-const path = 'absolute/path/to/folder'
+// const path = require('path')
 
 const [ ,, ...args ] = process.argv;
 
@@ -13,12 +13,15 @@ if(args.length === 0) {
 }
 
 const destination = args[0];
+const destinationTemp = `${destination}_temp`;
+const srcDir = `${destinationTemp}/boilerplate`;
 
 shell.exec(
-    'git clone https://github.com/javarouka/minimal-electron-typescript-boilerplate.git ' + destination,
+    'git clone https://github.com/javarouka/minimal-electron-typescript-boilerplate.git ' + destinationTemp,
     function() {
         console.log("complete cloning")
-        
+        shell.exec(`mv ${srcDir} ${destination}/`);
+        shell.exec("rm -rf " + destinationTemp);
     }
 )
 
