@@ -18,10 +18,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
+      # working-directory: ./temp
       run: |
         npm install
-        node bin/cli.js test
-        cd test
+        node bin/cli.js fromgithub
+        cd fromgithub
         npm install
         npm run build
       env:
