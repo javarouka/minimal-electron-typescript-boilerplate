@@ -14,7 +14,7 @@ $ cd boilerplate // There are boilerplate files that you need
 ### 2. using npx 😳
 
 ```
-$ npx {you want path}
+$ npx minimal-electron-typescript-boilerplate {you want path}
 ```
 
 ## Enjoy
