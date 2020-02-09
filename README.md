@@ -2,7 +2,7 @@
 
 Electron-Typescript-React boilerplate with minimal functionality.
 
-## Get
+## Installation
 
 ### 1. using clone
 
@@ -13,13 +13,11 @@ $ cd boilerplate // There are boilerplate files that you need
 
 ### 2. using npx 😳
 
-TODO.
+```
+$ npx {you want path}
+```
 
-## TODO
-- change eslint fron tslint
-- add sample test code
-
-## Start
+## Enjoy
 
 ### development
 
