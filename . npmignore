@@ -5,7 +5,7 @@
 .tscache
 .DS_Store
 node_modules/
-boliderplate/
+boilerplate/
 coverage/
 dist
 release
