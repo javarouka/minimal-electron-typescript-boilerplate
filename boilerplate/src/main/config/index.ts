@@ -9,5 +9,5 @@ export const prodURL = url.format({
     slashes: true
 });
 export const loadURL = dev ? devURL : prodURL;
-export const nodeIntegration = dev;
+export const nodeIntegration = true;
 export const supportAllClosed = process.platform !== 'darwin';

@@ -1,5 +1,6 @@
+
 interface BackendInterface {
-    readDir(): string[];
+    hello(): string
 }
 
 type Nullable<T> = T | null;

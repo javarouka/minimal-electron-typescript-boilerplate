@@ -1,7 +1,5 @@
-import * as fs from 'fs';
-
 const backendInterface: BackendInterface = {
-    readDir: () => fs.readdirSync('../')
+    hello: () => "world"
 };
 
 export default backendInterface;
