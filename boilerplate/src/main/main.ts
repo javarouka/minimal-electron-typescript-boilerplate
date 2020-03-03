@@ -5,6 +5,8 @@ import { supportAllClosed } from './config';
 
 let win: Nullable<BrowserWindow> = null;
 
+app.allowRendererProcessReuse = true;
+
 app.on('ready', async () => {
     enableIPC();
     win = await createWindow(app);

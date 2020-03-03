@@ -1,10 +1,7 @@
-
-interface BackendInterface {
-    hello(): string
-}
-
 type Nullable<T> = T | null;
 
+interface AppDomain {}
+
 declare interface Window {
-    backend: BackendInterface;
+    domain: AppDomain;
 }

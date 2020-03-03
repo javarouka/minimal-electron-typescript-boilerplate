@@ -23,6 +23,7 @@
   "bin": "./bin/cli.js",
   "main": "./dist/main.js",
   "scripts": {
+    "clean": "rimraf dist && rimraf release",
     "test": "jest --config ./jest/jest.config.js --coverage --passWithNoTests",
     "build:main": "cross-env NODE_ENV=production webpack --config ./config/webpack.main.prod.config.js",
     "build:renderer": "cross-env NODE_ENV=production webpack --config ./config/webpack.renderer.prod.config.js",
@@ -31,7 +32,7 @@
     "start:main-dev": "webpack --config ./config/webpack.main.config.js && electron ./dist/main.js",
     "start:dev": "cross-env START_HOT=1 npm run start:renderer-dev",
     "lint": "tslint '{src,test,mocks}/**/*.{ts,tsx}' --project ./tsconfig.json",
-    "pack": "cross-env NODE_ENV=production rimraf dist && rimraf release && npm run build && electron-builder --dir"
+    "pack": "cross-env NODE_ENV=production npm run clean && npm run build && electron-builder --dir"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",

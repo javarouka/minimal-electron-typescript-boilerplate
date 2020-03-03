@@ -1,3 +1,3 @@
-import backend from './backend/backendInterface';
+import AppDomain from '../domain/index';
 
-window.backend = backend;
+window.domain = AppDomain;
