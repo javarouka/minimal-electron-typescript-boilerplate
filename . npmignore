@@ -4,11 +4,9 @@
 .vscode
 .tscache
 .DS_Store
-node_modules/
-boilerplate/
-coverage/
+node_modules
+coverage
 dist
 release
 .vscode
 .idea
-package-lock.json

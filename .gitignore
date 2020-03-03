@@ -1,11 +1,9 @@
 .DS_Store
 .iml
 .idea
+.vscode
 .tscache
-.DS_Store
-node_modules/
-coverage/
+node_modules
+coverage
 dist
 release
-.vscode
-.idea
