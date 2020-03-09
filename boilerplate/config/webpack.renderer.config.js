@@ -8,7 +8,7 @@ const baseConfig = require('./webpack.base.config');
 module.exports = merge.smart(baseConfig, {
     target: 'electron-renderer',
     entry: {
-        app: ['@babel/polyfill','./src/renderer/index.tsx']
+        app: './src/renderer/index.tsx'
     },
     module: {
         rules: [
@@ -21,23 +21,28 @@ module.exports = merge.smart(baseConfig, {
                     babelrc: false,
                     presets: [
                         [
-                            '@babel/preset-env',
-                            { 
-                                targets: { 
-                                    browsers: 'last 2 versions ' 
-                                } 
-                            }
+                            '@babel/preset-env'
                         ],
                         '@babel/preset-typescript',
                         '@babel/preset-react'
                     ],
                     plugins: [
                         [
-                            "babel-plugin-styled-components",
+                            'babel-plugin-styled-components',
                             {
-                                "ssr": true,
-                                "displayName": true,
-                                "preprocess": false
+                                'ssr': true,
+                                'displayName': true,
+                                'preprocess': false
+                            }
+                        ],
+                        [
+                            '@babel/plugin-transform-runtime',
+                            {
+                                'absoluteRuntime': false,
+                                'corejs': false,
+                                'helpers': true,
+                                'regenerator': true,
+                                'useESModules': true,
                             }
                         ],
                         '@babel/plugin-proposal-optional-chaining',

@@ -1,23 +1,23 @@
 {
-  "name": "you",
-  "version": "0.0.6",
-  "description": "you",
+  "name": "update-me",
+  "version": "0.0.1-alpha",
+  "description": "update-me",
   "keywords": [
     "electron",
     "react",
     "typescript"
   ],
   "bugs": {
-    "url": "",
-    "email": "you@gmail.com"
+    "url": "http://www.plz.update.me",
+    "email": "update-me@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "update-me"
   },
   "author": {
-    "name": "you",
-    "email": "you@gmail.com"
+    "name": "update-me",
+    "email": "update-me@gmail.com"
   },
   "license": "you",
   "bin": "./bin/cli.js",
@@ -38,7 +38,7 @@
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
     "@babel/plugin-proposal-optional-chaining": "^7.8.3",
-    "@babel/polyfill": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.2",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
@@ -83,6 +83,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.8.7",
     "history": "^4.10.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -107,9 +108,9 @@
     ]
   },
   "build": {
-    "productName": "any",
+    "productName": "update-me",
     "mac": {
-      "category": "development"
+      "category": "update-me"
     },
     "directories": {
       "output": "release"
