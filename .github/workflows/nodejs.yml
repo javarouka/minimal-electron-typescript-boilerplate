@@ -28,6 +28,5 @@ jobs:
       run: |
         npm install
         npm run test
-        npm run pack
       env:
         CI: true
