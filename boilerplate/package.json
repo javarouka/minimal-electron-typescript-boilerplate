@@ -55,7 +55,7 @@
     "babel-loader": "8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
     "cross-env": "^7.0.0",
-    "electron": "^8.0.2",
+    "electron": "^13.6.6",
     "electron-builder": "^22.2.0",
     "electron-devtools-installer": "2.2.4",
     "file-loader": "^5.1.0",
